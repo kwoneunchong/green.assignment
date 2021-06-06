@@ -4,25 +4,169 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aran</title>
+    <title>퀸보석</title>
     <!-- 초기화 -->
+    <style>
+        * { margin: 0; padding: 0; } 
+        body { font-family:  'Helvetica', sans-serif; } 
+        li { list-style: none; } 
+        a { text-decoration: none; } 
+    </style>
     <!-- 헤더 -->
-    <!-- 타이틀 -->
+    <style>
+        #main_header {
+            height: 300px;
+            background: url("background.png");
+            position: relative;
+            text-align: center;
+            line-height: 300px;
+            border-bottom: 1px solid black;
+        }
+        #main_header > #title {
+            position: absolute;
+            left:45%; top: 50px;
+        }
+        #main_lnb {
+            position: absolute;
+            right: 0; top: 20px;
+        }
+    </style>
     <!-- 내비게이션(1) -->
+    <style>
+        #gnb {
+            border-bottom: 1px solid black;
+        }
+        #main_gnb {
+            color: black;
+            background: #ffffff;
+            margin: 0 10px 0 140px;
+            padding: 10px;
+        }
+        #main_gnb > ul {
+            overflow: hidden;
+        }
+        #main_gnb > ul > li {
+            width: 120px; float: left;
+        }
+    </style>
     <!-- 내비게이션(2) -->
+    <style>
+        #main_lnb >ul > li { 
+            width: 80px;
+            float: left;
+            }
+        #main_lnb > ul > li > a::before {
+            top: 9px; left: -1px;
+            width: 1px; height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+    </style>
+    <!-- 콘텐츠 공통 -->
+    <style>
+        #content {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+        #content > #main_section {
+        width: 100%;
+        float: left;
+    }
+        #content > #shopping {
+            width: 100%;
+            float: left;
+            margin-top: 40px;
+        }
+        #content > #info {
+            width: 100%;
+            float: left;
+        }
+        #content > #shopping > #best {
+            width: 100%;
+            float: left;
+            margin-bottom: 20px;
+        }
+    </style>
     <!-- 비주얼이미지 -->
+    <style>
+        #content > #main_section > #left {
+            display: inline;
+            width: 65%; 
+            float: left;
+            padding: 2px;
+        }
+        #content > #main_section > #right {
+            display: inline;
+            width: 34%;
+            float: right;
+            padding: 4px;
+        }
+    </style>
     <!-- 쇼핑카테고리 -->
+    <style>
+        #header {
+            text-align: center;
+        }
+        /* #hedear > h1 {
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        } */
+        #shopping > #best > .item {
+            display: block;
+            width: 24.2%;
+            float: left;
+            padding: 5px;
+            text-align: center;
+         }
+    </style>
+    <!-- 인포 이미지-->
+    <style>
+        #info > .img {
+            display: block;
+            width: 24.2%;
+            float: left;
+            padding: 5px;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #f0f0f0;
+         }
+    </style>
     <!-- 푸터 -->
+    <style>
+        #footer {
+            background: #f7f7f7;
+            height: 150px;
+        }
+        #footer > #footer_section {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        #footer > #footer_section > article.section {
+            margin-top: 20px;
+            display: block;
+            height: 150px;
+            width: 33%; 
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            float: left;
+        }
+    </style>
 </head>
 <body>
     <!-- 1헹 -->
     <header>
         <div id="main_header">
             <div id="title">
-                <img src="#"><!--로고넣기-->
+                <img src="logo.png" width="160px">
             </div>
         </div>
-        <nav id="main_gnb">
+        <div id="gnb">
+           <nav id="main_gnb">
             <ul>
                 <li><a href="#">best</a></li>
                 <li><a href="#">반지</a></li>
@@ -32,8 +176,11 @@
                 <li><a href="#">공지사항</a></li>
                 <li><a href="#">리뷰</a></li>
                 <li><a href="#">샵소개</a></li>
+                <li><input type="search" /></li>
+                <li><input type="submit" /></li>
             </ul>
-        </nav>
+           </nav>
+        </div>
         <nav id="main_lnb">
             <ul>
                 <li><a href="#">Log in</a></li>
@@ -44,70 +191,82 @@
         </nav>
     </header>
     <!-- 2행 -->
-    <div>
-        <section>
-            <article>
-                <img src="#" width="200px"><!--이미지 넣기-->
-            </article>
-            <article>
-                <img src="#" width="200px"><!--이미지 넣기-->
-            </article>
-            <article>
-                <img src="#" width="200px"><!--이미지 넣기-->
-            </article>
+<div id="content">
+        <section id="main_section">
+            <div id="left">
+                <img src="01.png" width="100%" height="500px"><!--이미지 넣기-->
+            </div>
+            <div id="right">
+                <img src="03.png" width="100%" height="248px"><!--이미지 넣기-->
+                <img src="05.png" width="100%" height="248px"><!--이미지 넣기-->
+            </div>
         </section>
-    </div>
     <!-- 3행 -->
-    <section>
-        <h1>Best</h1>
-        <article>
-            <img src="#" width="200px"><!--이미지 넣기-->
-            <h6>14k 아코미스링</h6><br />
-            <h6>280,000원</h6>
-        </article>
-        <article>
-            <img src="#" width="200px"><!--이미지 넣기-->
-            <h6>14k 꼬임미스링</h6><br />
-            <h6>280,000원</h6>
-        </article>
-        <article>
-            <img src="#" width="200px"><!--이미지 넣기-->
-            <h6>14k 볼반지</h6><br />
-            <h6>280,000원</h6>
-        </article>
-        <article>
-            <img src="#" width="200px"><!--이미지 넣기-->
-            <h6>14k 볼체인반지</h6><br />
-            <h6>280,000원</h6>
-        </article>
-    </section>
+    <div id="shopping">
+           <header id="header">
+            <h1>Best</h1>
+           </header>
+           <section id="best">
+               <div class="item">
+                 <img src="11.png" width="100%"><!--이미지 넣기-->
+                 <h6>14k 아코미스링</h6>
+                 <h6>280,000원</h6>
+               </div>
+               <div class="item">
+                 <img src="22.png" width="100%"><!--이미지 넣기-->
+                 <h6>14k 꼬임미스링</h6>
+                 <h6>280,000원</h6>
+               </div>
+               <div class="item">
+                 <img src="33.png" width="100%"><!--이미지 넣기-->
+                 <h6>14k 볼반지</h6>
+                 <h6>280,000원</h6>
+               </div>
+               <div class="item">
+                 <img src="44.png" width="100%"><!--이미지 넣기-->
+                 <h6>14k 볼체인반지</h6>
+                 <h6>280,000원</h6>
+               </div>
+            </section>
+    </div>
     <!-- 4행 -->
     <div id="info">
-          <article>
-            <img src="#">
+          <article class="img" >
+            <img src="111.png" width="100%">
           </article>
-          <article>
-            <img src="#">
+          <article class="img">
+            <img src="222.png" width="100%">
           </article>
-          <article>
-            <img src="#">
+          <article class="img">
+            <img src="333.png" width="100%">
           </article>
-          <article>
-            <img src="#">
+          <article class="img">
+            <img src="444.png" width="100%">
           </article>
     </div>
+</div>
     <!-- 5헹 -->
     <div id="footer">
-        <article>
-            <h6>고객센터</h6>
-            <p>02.777.7777</p><br />
-            <p>평일 오전9:00~오후6:00</p><br />
-            <p>붐</p>
-        </article>
-        <article>
-            <h6>은행계좌</h6>
-        </article>
-        <article></article>
+       <section id="footer_section">
+         <article class="section">
+            <h4>고객센터</h4><br />
+            <h6>02.777.7777</h6>
+            <h6>평일 오전9:00~오후6:00</h6>
+            <h6>휴무 토,일 및 공휴일</h6>
+         </article>
+         <article class="section">
+            <h4>은행계좌</h4><br />
+            <h6>kb국민은행</h6>
+            <h6>예금주 퀸보석</h6>
+            <h6>000-00000-0000</h6>
+         </article>
+         <article class="section">
+            <h4>배송&as안내</h4><br />
+            <h6>우체국 택배조회</h6>
+            <h6>as배송지</h6>
+            <h6>택배조회하기</h6>
+         </article>
+       </section>
     </div>
 </body>
 </html>

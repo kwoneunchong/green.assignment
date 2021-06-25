@@ -15,9 +15,10 @@
         </ul>
     <script src="jquery-2.2.4.min.js"></script>
     <script>
-          $("li").each(function(index,elem) {
-                  $(elem).prepend(''+index+':');
-          });
+          var listItems = $('li');
+          var rawListItem = listItems[1];
+          var html= rawListItem.innerHTML;
+          console.log(html);
     </script>
 </body>
 </html>

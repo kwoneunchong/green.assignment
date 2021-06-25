@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 <body>
-        <ul>
-                <li>Html Tutorial</li>
-                <li>mongaob Tutorial</li>
-                <li>python Tutorial</li>
-        </ul>
+    <div style="height: 75px;
+    width: 200px;
+    padding: 10px;
+    margin: 3px;
+    border: 1px solid blue;
+    background-color:#f3e2a9;"></div>
+    <p></p>
+
     <script src="jquery-2.2.4.min.js"></script>
     <script>
-          $("li").each(function(index,elem) {
-                  $(elem).prepend(''+index+':');
+          $(function(){
+              var pos_t=$("div").position().top;
+              var pos_l=$("div").position().left;
+              $("p").text("top: "+pos_t+"left: "+pos_l);
           });
+
+
     </script>
 </body>
 </html>

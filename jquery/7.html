@@ -8,16 +8,17 @@
 
 </head>
 <body>
-        <ul>
-                <li>Html Tutorial</li>
-                <li>mongaob Tutorial</li>
-                <li>python Tutorial</li>
-        </ul>
+        <a href="http://www.google.com">google</a>
+
     <script src="jquery-2.2.4.min.js"></script>
+
     <script>
-          $("li").each(function(index,elem) {
-                  $(elem).prepend(''+index+':');
-          });
+        //   텍스트 바꿔줌
+          $("a").text("naver");
+        //   속성값 바꿔줌
+          $("a").attr("href", "http://naver.com");
+
+
     </script>
 </body>
 </html>

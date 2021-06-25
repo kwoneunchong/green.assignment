@@ -8,16 +8,17 @@
 
 </head>
 <body>
-        <ul>
-                <li>Html Tutorial</li>
-                <li>mongaob Tutorial</li>
-                <li>python Tutorial</li>
-        </ul>
+    <div style="background-color: yellow">
+       <p>click on the paragraph</p>
+    </div>
+    <button>click me</button>
+
     <script src="jquery-2.2.4.min.js"></script>
     <script>
-          $("li").each(function(index,elem) {
-                  $(elem).prepend(''+index+':');
-          });
+              $("button").click(function() {
+                  $("div").css("background-color","green");
+              });
+
     </script>
 </body>
 </html>

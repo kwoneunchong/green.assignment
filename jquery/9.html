@@ -8,16 +8,16 @@
 
 </head>
 <body>
-        <ul>
-                <li>Html Tutorial</li>
-                <li>mongaob Tutorial</li>
-                <li>python Tutorial</li>
-        </ul>
+    <input type="text" />
+
     <script src="jquery-2.2.4.min.js"></script>
+
     <script>
-          $("li").each(function(index,elem) {
-                  $(elem).prepend(''+index+':');
-          });
+        $("input").keyup(function() {
+          var tvalue = $ (this).val();
+        console.log(tvalue);
+        });
+
     </script>
 </body>
 </html>
